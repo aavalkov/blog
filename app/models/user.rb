@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  validates :email, :presence => true
-  validates_uniqueness_of :emial
+  validates_presence_of :email
+  validates_uniqueness_of :email
 
   has_secure_password
 end
