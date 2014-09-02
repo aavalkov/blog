@@ -1,0 +1,14 @@
+<%= render("layouts/errors", :object => @post) %>
+
+<%= form_for(@post) do |f| %>
+  <div class="form-group">
+    <%= f.hidden_field :user_id, :value => params[:id] %>
+    <%= f.label "Title" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label "Text" %>
+    <%= f.text_field :article %>
+  </div>
+  <%= f.submit(:class => 'btn btn-success') %>
+<% end%>
