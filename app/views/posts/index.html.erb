@@ -1,8 +1,8 @@
-<h1> Blog <h1>
+<h1> Blog </h1>
 
 <% @posts.each do |post| %>
-  <dl><%= post.name %></dl>
-  <dt><%= post.article %></dt>
+  <dt><%= post.name %></dt>
+  <dl><%= post.article %></dl>
 <% end %>
 
 <%= link_to "New post", new_post_path, :class => 'btn btn-success' %>
