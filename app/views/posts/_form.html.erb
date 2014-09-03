@@ -2,7 +2,6 @@
 
 <%= form_for(@post) do |f| %>
   <div class="form-group">
-    <%= f.hidden_field :user_id, :value => params[:id] %>
     <%= f.label "Title" %>
     <%= f.text_field :name %>
   </div>
