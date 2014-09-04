@@ -1,28 +1,45 @@
-== README
+#Coding Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a blog-type site. Users can sign up, log in/out, and post on the blog. Users can also edit, delete posts, but only if they are logged in and on a blog entry that they wrote.
 
-Things you may want to cover:
+The project is for my Epicodus conventional rails assessment.
 
-* Ruby version
+##Author
+[Anna Valkov](http://github.com/aavalkov.com)
 
-* System dependencies
+##Setup
+In your terminal, clone the repo:
 
-* Configuration
+```console
+$ clone https://github.com/aavalkov/blog.git
+```
 
-* Database creation
+Make sure you've installed [postgres](http://www.postgresql.org/download/) and have started the server:
 
-* Database initialization
+```console
+$ postgres
+```
 
-* How to run the test suite
+Install all the dependencies:
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+$ bundle install
+```
 
-* Deployment instructions
+Set up the databases on your local machine:
 
-* ...
+```console
+$ rake db:create
+$ rake db:schema:load
+```
+
+Finally, start the rails server:
+
+```console
+$ rails s
+```
+It should now be available at `localhost:3000`.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##License
+MIT
