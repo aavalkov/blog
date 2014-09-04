@@ -1,17 +1,30 @@
 <%= render("layouts/errors", :object => @user) %>
 
 <%= form_for(@user) do |f| %>
-  <div class="form-group">
-    <%= f.label :email %></br>
-    <%= f.text_field :email %>
+  <div class ="row">
+    <div class ="col-md-6">
+      <div class="form-group">
+        <%= f.label :email %></br>
+        <%= f.text_field :email, :class => "form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :password %></br>
-    <%= f.password_field :password %>
+  <div class ="row">
+    <div class ="col-md-6">
+      <div class="form-group">
+        <%= f.label :password %></br>
+        <%= f.password_field :password, :class => "form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <%= f.label :password_confirmation %></br>
-    <%= f.password_field :password_confirmation %>
+  <div class ="row">
+    <div class ="col-md-6">
+      <div class="form-group">
+        <%= f.label :password_confirmation %></br>
+        <%= f.password_field :password_confirmation, :class => "form-control" %>
+      </div>
+    </div>
   </div>
   <%= f.submit(:class => "btn btn-primary") %>
 <% end %>
+
