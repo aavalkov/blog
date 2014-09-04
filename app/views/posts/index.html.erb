@@ -1,6 +1,6 @@
 <h1> Blog </h1>
 
-<% @posts.each do |post| %>
+<% @posts.sort.reverse.each do |post| %>
   <dt><%= link_to "#{post.name}", post_path(post) %></dt>
   <dl><%= post.article %></dl>
 <% end %>
