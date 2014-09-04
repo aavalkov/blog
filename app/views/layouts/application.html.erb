@@ -31,8 +31,19 @@
   </nav>
   <div class ="container">
 
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
+
+  <% if flash[:notice] %>
+    <div class="alert alert-success alert-dismissible center" role="alert">
+      <%= flash[:notice] %> <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+    </div>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <div class="alert alert-danger alert-dismissible center" role="alert">
+      <%= flash[:alert] %> <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+    </div>
+  <% end %>
+
     <div class = "page-header">
       <h1>Code Tips <small>a blog for those who want easy to understand info</small></h1>
     </div>
