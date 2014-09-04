@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+   before_filter :authorize, only: [:new, :create, :edit, :update]
+
   def index
     @posts = Post.all
   end
