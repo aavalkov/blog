@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-   before_filter :authorize, only: [:new, :create, :edit, :update]
+   before_filter :authorize, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -38,6 +38,12 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:notice] = "Post Deleted"
+    redirect_to posts_path
+  end
 
   private
   def post_params
