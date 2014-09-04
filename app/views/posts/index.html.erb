@@ -5,6 +5,8 @@
   <dl><%= post.article %></dl>
 <% end %>
 
-<%= link_to "New post", new_post_path, :class => 'btn btn-success' %>
+<% if current_user != nil %>
+  <%= link_to "New post", new_post_path, :class => 'btn btn-success' %>
+<% end %>
 
 
