@@ -1,6 +1,6 @@
 
 <% @posts.sort.reverse.each do |post| %>
-  <dt><%= link_to "#{post.name}", post_path(post) %></dt>
+  <dt><h3><%= link_to "#{post.name}", post_path(post) %></h3></dt>
   <dl><%= post.article %></dl>
 <% end %>
 
